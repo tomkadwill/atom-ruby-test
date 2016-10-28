@@ -9,6 +9,7 @@ module.exports =
 
     initialize: (params) ->
       @params = params
+      @panel = params.panel
       @sourceInfo = new SourceInfo()
 
     run: ->
@@ -22,6 +23,7 @@ module.exports =
       command: @command
       cwd:     => @sourceInfo.projectPath()
       currentShell: @sourceInfo.currentShell()
+      panel: @panel
 
     command: =>
       framework = @sourceInfo.testFramework()

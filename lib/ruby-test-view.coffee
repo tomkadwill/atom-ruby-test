@@ -93,6 +93,7 @@ class RubyTestView extends View
     write: @write
     exit: @onTestRunEnd
     setTestInfo: @setTestInfo
+    panel: @
 
   setTestInfo: (infoStr) =>
     @header.text(infoStr)
@@ -102,7 +103,7 @@ class RubyTestView extends View
 
   showPanel: ->
     unless @hasParent()
-      atom.workspace.addBottomPanel(item: @)
+      atom.workspace.addRightPanel(item: @)
       @spinner = @find('.ruby-test-spinner')
 
   write: (str) =>

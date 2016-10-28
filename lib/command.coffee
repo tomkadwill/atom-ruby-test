@@ -1,7 +1,7 @@
 module.exports =
   # Calculates test command, based on test framework and test scope
   class Command
-    @testCommand: (scope, testFramework) ->
+    @testCommand: (scope = "file", testFramework) ->
       if scope == "single"
         @testSingleCommand(testFramework)
       else if scope == "file"

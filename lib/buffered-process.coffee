@@ -38,7 +38,7 @@ class BufferedProcess
   #             is sent in a final call (optional).
   #   :exit - The callback {Function} which receives a single argument
   #           containing the exit status (optional).
-  constructor: ({command, args, options, stdout, stderr, exit}={}, outputCharacters=false) ->
+  constructor: ({command, args, options, stdout, stderr, exit, panel}={}, outputCharacters=false) ->
     options ?= {}
     # Related to joyent/node#2318
     if process.platform is "win32"
@@ -90,6 +90,10 @@ class BufferedProcess
       processExited = false
       @process.on 'exit', (code) ->
         exitCode = code
+
+        if exitCode == 0
+          panel.closePanel()
+
         processExited = true
         triggerExitCallback()
 

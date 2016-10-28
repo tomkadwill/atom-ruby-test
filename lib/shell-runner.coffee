@@ -13,6 +13,7 @@ module.exports =
       @exit = params.exit || throw "Missing ::exit parameter"
       @command = params.command || throw "Missing ::command parameter"
       @currentShell = params.currentShell || throw "Missing ::currentShell parameter"
+      @panel = params.panel || throw "Missing ::panel parameter"
 
     run: ->
       @process = @newProcess(@fullCommand())
@@ -45,7 +46,7 @@ module.exports =
       args = ['-l', '-c', testCommand]
       options = { cwd: @params.cwd }
       console.log "ruby-test: Running test:", {command: command, args: args, cwd: @params.cwd()}
-      params = { command, args, options, @stdout, @stderr, @exit }
+      params = { command, args, options, @stdout, @stderr, @exit, @panel }
       outputCharacters = true
       process = new @processor params, outputCharacters
       process
