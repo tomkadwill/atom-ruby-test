@@ -102,7 +102,7 @@ class RubyTestView extends View
 
   showPanel: ->
     unless @hasParent()
-      atom.workspace.addBottomPanel(item: @)
+      atom.workspace.addRightPanel(item: @)
       @spinner = @find('.ruby-test-spinner')
 
   write: (str) =>
