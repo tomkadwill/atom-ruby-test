@@ -1,10 +1,10 @@
 {
-  "name": "ruby-test",
-  "author": "Moxley Stratton",
-  "homepage": "https://github.com/moxley/atom-ruby-test",
-  "bugs": "https://github.com/moxley/atom-ruby-test/issues",
+  "name": "atom-test-runner",
+  "author": "Tom Kadwill",
+  "homepage": "https://github.com/tomkadwill/atom-test-runner",
+  "bugs": "https://github.com/tomkadwill/atom-test-runner/issues",
   "main": "./lib/ruby-test",
-  "version": "0.9.17",
+  "version": "0.0.0",
   "description": "Run Ruby tests, Rspec examples, and Cucumber features from Atom",
   "activationCommands": {
     "atom-workspace": [
@@ -15,7 +15,7 @@
       "ruby-test:test-all"
     ]
   },
-  "repository": "https://github.com/moxley/atom-ruby-test",
+  "repository": "https://github.com/tomkadwill/atom-test-runner",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
