@@ -4,7 +4,7 @@
   "homepage": "https://github.com/tomkadwill/atom-test-runner",
   "bugs": "https://github.com/tomkadwill/atom-test-runner/issues",
   "main": "./lib/ruby-test",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Run Ruby tests, Rspec examples, and Cucumber features from Atom",
   "activationCommands": {
     "atom-workspace": [
