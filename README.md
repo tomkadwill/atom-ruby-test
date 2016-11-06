@@ -1,11 +1,11 @@
-# ruby-test package
+# atom-test package
 
 [![Build Status](https://api.travis-ci.org/moxley/atom-ruby-test.svg?branch=master)](https://travis-ci.org/moxley/atom-ruby-test)
 
 Run Ruby tests, RSpec examples, and Cucumber features from Atom,
 quickly and easily.
 
-![Running tests is quick and easy](http://cl.ly/image/300n2g101z0y/ruby-test6.gif)
+![Running tests is quick and easy](https://raw.githubusercontent.com/tomkadwill/atom-test/master/images/run-tests.gif)
 
 ## Install
 
