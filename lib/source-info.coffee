@@ -10,6 +10,7 @@ module.exports =
       rspec:   'rspec'
       feature: 'cucumber'
       minitest: 'minitest'
+      python: 'python'
 
     regExpForTestStyle:
       unit: /def\s(.*?)$/
@@ -125,7 +126,7 @@ module.exports =
 
         if not @activeFile()
           null
-        else if matches = @activeFile().match(/_(test|spec)\.rb$/)
+        else if matches = @activeFile().match(/_(test|spec)\.rb|.(py)$/)
           if matches[1] == 'test' and atom.config.get("ruby-test.testFramework")
             atom.config.get("ruby-test.testFramework")
           else if matches[1] == 'spec' and atom.config.get("ruby-test.specFramework")
@@ -134,6 +135,8 @@ module.exports =
             'minitest'
           else if matches[1] == 'spec'
             'rspec'
+          else if matches[2] == 'py'
+            'python'
           else
             'test'
         else if matches = @activeFile().match(/\.(feature)$/)
