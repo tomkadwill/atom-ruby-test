@@ -50,6 +50,18 @@ module.exports =
       title: "Cucumber command: Run features at current line"
       type: 'string',
       default: "cucumber --color {relative_path}:{line_number}"
+    pythonAllCommand: #TODO: fixme
+      title: "Unittest command: Run all python test files"
+      type: 'string',
+      default: "python {relative_path}"
+    pythonFileCommand:
+      title: "Unittest command: Run python file"
+      type: 'string',
+      default: "python {relative_path}"
+    pythonSingleCommand: #TODO: fixme
+      title: "Unittest command: Run python file at current line"
+      type: 'string',
+      default: "python {relative_path}"
     shell:
       type: 'string',
       default: "bash"
