@@ -30,6 +30,7 @@
     "test",
     "rspec",
     "spec",
-    "cucumber"
+    "cucumber",
+    "python"
   ]
 }
