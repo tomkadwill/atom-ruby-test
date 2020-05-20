@@ -44,8 +44,8 @@ module.exports =
     newProcess: (testCommand) ->
       command = @currentShell
       args = ['-l', '-c', testCommand]
-      options = { cwd: @params.cwd }
-      console.log "ruby-test: Running test:", {command: command, args: args, cwd: @params.cwd()}
+      options = { cwd: @params.cwd() }
+      console.log "ruby-test: Running test:", {command: command, args: args, cwd: options.cwd}
       params = { command, args, options, @stdout, @stderr, @exit, @panel }
       outputCharacters = true
       process = new @processor params, outputCharacters
